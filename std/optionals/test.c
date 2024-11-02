@@ -57,6 +57,27 @@ test("Empty Optionals") {
     }
 }
 
+
+test("Alternative constructors") {
+    it("optionals::of should be optionals::some") {
+        int value = 10;
+        optional_t *expected = optionals.some(value, sizeof value);
+        optional_t *actual = optionals.of(value, sizeof value);
+
+        assert(optionals.is_some(expected) == optionals.is_some(actual));
+        assert(optionals.value(expected) == optionals.value(actual));
+    }
+    
+    it("optionals::empty should be optionals::none") {
+        optional_t *expected = optionals.none();
+        optional_t *actual = optionals.empty();
+
+        assert(optionals.is_some(expected) == optionals.is_some(actual));
+        assert(optionals.value(expected) == optionals.value(actual));
+    }
+}
+
+
 int main() {
     run_tests("Test results.h module");
     return 0;

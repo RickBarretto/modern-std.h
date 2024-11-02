@@ -18,6 +18,10 @@ typedef struct optionals_mod {
     func(some, (const void *value, const size_t size), optional_t*);
     func(none, (void), optional_t*);
 
+    // Alternative Constructors
+    func(of, (const void *value, const size_t size), optional_t*);
+    func(empty, (void), optional_t*);
+
     // Getters
     func(value, (const optional_t *optional), void*);
     func(size, (const optional_t *optional), size_t);

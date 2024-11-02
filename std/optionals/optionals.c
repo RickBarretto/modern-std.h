@@ -60,6 +60,8 @@ bool is_none(const optional_t *optional) {
 const optionals_mod optionals = {
     .some = some,
     .none = none,
+    .of = some,
+    .empty = none,
     
     .value = value,
     .size = size,
