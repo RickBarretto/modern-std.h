@@ -1,0 +1,12 @@
+[lib]
+headers = "results.h"
+sources = "results.c"
+
+[dependency]
+std = ".."
+
+[test]
+main = "test_results.c"
+
+[build]
+cc = "gcc"

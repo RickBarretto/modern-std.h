@@ -1,0 +1,3 @@
+[lib]
+headers = "unitc.h"
+sources = "unitc.c"

@@ -1,0 +1,12 @@
+[lib]
+headers = "optionals.h"
+sources = "optionals.c"
+
+[dependency]
+std = ".."
+
+[test]
+main = "test.c"
+
+[build]
+cc = "gcc"
