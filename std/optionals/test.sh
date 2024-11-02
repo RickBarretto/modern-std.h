@@ -3,7 +3,8 @@
 gcc -o test.exe test.c \
     optionals.c \
     ../unitc/unitc.c \
-    -I"../../"
+    -I"../../" \
+    -Wall -Wextra
 
 echo
 echo "====~=~=~=~=~====~=~=~=~=~===="
